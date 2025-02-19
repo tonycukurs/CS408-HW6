@@ -58,8 +58,8 @@ article {
  .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  padding: 20px;
+  gap: 5px;
+  padding: 5px;
 }
 
 .box {
@@ -89,7 +89,7 @@ h1 {
 h2{ 
   font-family: 'Lucida Handwriting', cursive;
 }
-
+/*Main title*/
 .title {
   font-size: 100px;
   text-align: center;
@@ -97,13 +97,24 @@ h2{
   color: black;
 }
 
+/*For the title above paragraphs*/
 .small-title {
   font-size: 30px;
-  
   color: black;
 }
 
-
+/*text in paragraphs*/
 p {
   text-align: justify;
+
+  /*Helps join the h2 and paragraphs together when formatting grid*/
 }
+
+div{
+  text-align: left;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 10px;
+}
+
+
