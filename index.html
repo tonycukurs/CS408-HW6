@@ -1,79 +1,53 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Fancy letterheaded paper</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title>Hello World!</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="shortcut icon" href="img/favicon.ico">
-</head>
+  <body>
 
-<body>
-  <h1>HTML Rocks!</h1>
-  <p>
-    <button  onclick="helloWorld()">Prints Hello World to the Developer console</button>
-  </p>
-  <hr>
-  <form id="addForm">
-    <label for="num1">Number 1:</label>
-    <input type="number" id="num1" name="num1" required>
-    <br>
-    <label for="num2">Number 2:</label>
-    <input type="number" id="num2" name="num2" required>
-    <br>
-    <button type="submit">Add Numbers</button>
-  </form>
+    <img src="img/top-image.png" alt="top" class="logo">
 
-  <label id="result">Result:</label>
+    <article>
+      <h1>Awesome<br>Company</h1>
+      <img src="img/logo.png" alt="Awesome Company logo" class="logo">
 
-  <hr>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac tellus non nunc ornare bibendum. Morbi cursus eget lacus vel lobortis. Morbi vel dictum sapien, vitae molestie quam. Vestibulum porta viverra lorem nec lacinia. Nam nec erat suscipit, tincidunt metus sed, varius ligula. Cras quis viverra lorem, ac hendrerit libero. Curabitur luctus mauris vel ex lobortis, sit amet aliquam leo congue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis nisi imperdiet, tristique ante nec, sagittis risus. 
+      </p>
 
-  <button id="jokeButton">Get a Random Joke</button>
-  <p id="joke"></p>
+      <p>
+        Maecenas eu feugiat nulla, nec posuere turpis. Duis consequat ante id ante luctus semper. Aliquam eget leo vestibulum, dapibus est at, vehicula urna. Maecenas ut tempus lorem, ut imperdiet sapien. Ut consequat enim nec est accumsan tincidunt. Aliquam nec nibh tincidunt, rhoncus ante a, gravida ex. Aenean id lacus justo. Duis eget venenatis eros, non consectetur sem. Duis feugiat nisi ut purus feugiat, quis fermentum lorem lobortis. Donec pharetra facilisis efficitur. Maecenas ac neque congue, interdum erat at, consequat felis. Proin vel mauris ullamcorper, egestas dui commodo, eleifend felis. Morbi accumsan quam vel justo posuere cursus. Curabitur sodales id risus in lacinia.
+      </p>
+      
+      <p>
+        Phasellus finibus imperdiet orci, et aliquam elit mattis varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Cras varius fringilla ipsum et vehicula. Aliquam eget tempus ipsum. Praesent urna neque, lobortis vitae diam in, hendrerit commodo libero. Fusce tincidunt purus a libero mattis, id fermentum nisl aliquam. Mauris varius suscipit augue a bibendum. Ut cursus porttitor augue, eu tempus erat. Maecenas eget tincidunt ex. Aliquam pellentesque molestie tortor sed laoreet. Sed et ante cursus, hendrerit mi sit amet, euismod lacus. Fusce at fermentum ligula. 
+       </p> 
 
-  <script type="module" script="js/main.js">
-    import {helloWorld, add, fetchRandomJoke} from './js/main.js';
+       <p>
+        Duis porttitor turpis ut turpis sollicitudin, gravida facilisis leo scelerisque. Curabitur at quam sit amet massa dapibus facilisis. Donec suscipit vehicula tempor. Sed eget dolor ullamcorper, condimentum ex sollicitudin, mollis sapien. Aenean scelerisque ullamcorper metus, a pulvinar lorem facilisis vitae. Nam a lacus vel tortor tincidunt pharetra at tristique felis. Mauris hendrerit neque a ex porta, nec molestie enim gravida. Mauris varius quam in velit bibendum, ac gravida leo tincidunt. Praesent in nibh dui. Vivamus mattis a velit ac egestas. Duis vulputate tristique ante, in fermentum ante elementum in. 
+        </p>
 
-    // This shows how to assign a function to the window object
-    // so that it can be called from the browser console
-    window.helloWorld = helloWorld;
+        <p>
+          Aliquam ac sollicitudin purus. Phasellus vel congue mauris. Quisque at nibh sed neque fermentum convallis. In auctor tempor eros eget bibendum. Nam diam nulla, sagittis ut nibh ut, auctor interdum dolor. Nulla ex dolor, accumsan vitae pretium a, suscipit at metus. Donec vitae euismod nunc, vitae feugiat magna. Sed at porta tellus. 
+        </p>
 
-    // This shows how to add an event listener to a button in the HTML
-    // and call a function when the button is clicked
-    const form = document.getElementById('addForm');
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const num1 = parseFloat(document.getElementById('num1').value);
-      const num2 = parseFloat(document.getElementById('num2').value);
-      try{
-        const result = add(num1, num2);
-        document.getElementById('result').textContent = `Result: ${result}`;
-      }catch(e){
-        console.error(e);
-        document.getElementById('result').textContent = `Error: ${e.message}`;
-      }
+      <address>
+        <p>The Awesome Company</p>
+        <p>102-112 Frail Bend Bridge<br>
+        The Dwindlings<br>
+        Little Hornet<br>
+        HX3 9ZQ<br>
+        UK</p>
+      </address>
+    
+    </article>
 
-    });
+  <img src="img/bottom-image.png" alt="bottom" class="logo">
 
-    // this shows how to add an event listener to a button in the HTML
-    // that calls a function that fetches a random joke from an API
-    // and displays it on the page
-    const jokebtn = document.getElementById('jokeButton');
-    const jokeresult = document.getElementById('joke');
-    jokebtn.addEventListener('click', async () => {
-      try {
-        jokeresult.textContent = 'Loading...';
-        const joke = await fetchRandomJoke();
-        document.getElementById('joke').textContent = joke;
-      } catch (e) {
-        console.error(e);
-        document.getElementById('joke').textContent = `Error: ${e.message}`;
-      }
-    });
-  </script>
-
-</body>
-
+  </body>
 </html>
