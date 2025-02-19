@@ -33,11 +33,10 @@ address {
 
 
 /* Your CSS below here */
-article {
-  width: 210mm;
-  height: 297mm;
-  margin: 20px auto;
-  position: relative;
+
+/*body contains the png for background*/
+
+body{
   background: 
     linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0.3) 100%), 
     url("../img/top-image.png") top center no-repeat,
@@ -48,16 +47,31 @@ article {
   border-bottom: 1mm solid #333;
 }
 
+article {
+  width: 250mm;
+  height: 500mm;
+  margin: 20px auto;
+  position: relative;
+  
+}
+
+ .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
 .box {
   width: 350px;
-  height: 150px;
+  height: 200px;
   margin: 10px;
   padding: 25px;
   border: 5px solid black;
 }
 
 h1 {
-  position: absolute;
+  position: static;
   top: 12mm;
   left: 20mm;
   width: 128px;
@@ -72,13 +86,16 @@ h1 {
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
 }
 
-
-article {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  padding: 20px;
+h2{ 
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  color: black;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
 }
+
+
+
 
 p {
   text-align: justify;
