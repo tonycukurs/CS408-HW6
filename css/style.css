@@ -49,26 +49,23 @@ body{
 
 article {
   width: 250mm;
-  height: 500mm;
+  height: 400mm;
   margin: 20px auto;
   position: relative;
   
 }
-
- .grid {
+.grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5px;
-  padding: 5px;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  gap: 20px; /* Adjusts spacing between divs */
+  padding: 20px;
 }
 
 .box {
-  width: 350px;
-  height: 200px;
-  margin: 10px;
-  padding: 25px;
-  border: 5px solid black;
+  padding: 15px;
+  max-width: 100%;
 }
+
 
 h1 {
   position: static;
@@ -87,13 +84,13 @@ h1 {
 }
 
 h2{ 
-  font-family: 'Lucida Handwriting', cursive;
+  font-family: 'Lucida Handwriting', 'cursive';
 }
 /*Main title*/
 .title {
   font-size: 100px;
   text-align: center;
-  padding: 10px;
+  padding: 5%;
   color: black;
 }
 
@@ -109,12 +106,49 @@ p {
 
   /*Helps join the h2 and paragraphs together when formatting grid*/
 }
+div {
+  padding: 10px; /* Reduce excessive spacing */
+}
 
-div{
-  text-align: left;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  padding: 10px;
+p {
+  margin: 10px 0;  /* Controls vertical spacing */
+  line-height: 1.6; /* Improves readability */
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;  /* Align items vertically */
+  gap: 10px;  /* Adds spacing between elements */
+  margin-top: 20px; /* Adjust spacing from elements above */
 }
 
 
+.radio-group button {
+  padding: 8px 12px;
+  border: 2px solid #333;
+  background-color: white;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.radio-group button:hover {
+  background-color: #333;
+  color: white;
+}
+
+.radio-group input[type="radio"] {
+  transform: scale(1.2); /* Makes radio buttons slightly bigger */
+  margin-right: 5px;
+}
+
+.radio-group label {
+  font-size: 16px;
+  cursor: pointer;
+
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
