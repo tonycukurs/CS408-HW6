@@ -19,6 +19,7 @@ body {
   
 }
 
+/*Made adjustments to background using article element*/
 article {
   width: 210mm;
   height: 297mm;
@@ -27,8 +28,8 @@ article {
   background: 
   url('../img/top-image.png') center top no-repeat,
   url('../img/bottom-image.png') center bottom no-repeat;
-background-size: contain, contain;
-background-attachment: fixed;
+  background-size: contain, contain;
+  background-attachment: fixed;
 }
 
 address {
